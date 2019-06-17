@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-
+import { bold } from 'ansi-colors';
 
 export default styles = StyleSheet.create({
   container: {
@@ -11,13 +11,25 @@ export default styles = StyleSheet.create({
     borderColor: '#000000', 
     fontSize: 20,
     textAlign: 'center',
-    marginTop: 5,
+    backgroundColor: '#f2f5f9',
+    marginTop: 20,
+    marginBottom: 0,
+    width: 350,
+    height: 50,
+    fontSize: 15,
   },
   title: {
     fontSize: 20,
     textAlign: 'center',
-    marginTop: 55,
+    marginTop: 50,
     borderBottomColor: '#FFFFFF', 
-    borderBottomWidth: 50,
+    // borderBottomWidth: 50,
+  },
+  userDetailContainer: {
+    marginBottom:100,
+  },
+  userName: {
+    marginTop: 30,
+    fontWeight: 'bold',
   }
 });
