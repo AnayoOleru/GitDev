@@ -6,11 +6,16 @@ import style from '../Styles/AllStyle';
 
 export default class DevList extends Component{
   render() {
+    // const {navigate} = this.props.navigation;
     return (
       <View style={style.container}>
-        <Text style={style.title}>Java Developers</Text>
+        <Text style={style.title}>{this.props.title}</Text>
         <Search />
         <UserDetail />
+        {/* <Button
+        title="Go to Jane's profile"
+        onPress={() => navigate('User', {name: 'Jane'})}
+      /> */}
       </View>
     );
   }
