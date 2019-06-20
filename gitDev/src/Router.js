@@ -1,14 +1,23 @@
 import React from 'react';
-import { Scene, Router } from 'react-native-router-flux';
+import { createStackNavigator, createAppContainer, createBottomTabNavigator } from "react-navigation";
 import DevList from './Screens/DevList.Screen';
+import Profile from './Screens/Profile.Screen';
+import About from './Screens/About.Screen';
+  
+  const TabNavigator = createBottomTabNavigator(
+    {
+      Home: DevList,
+      About: About
+    },
+    {
+        initialRouteName: "Home"
+      }
+  );
 
-const RouterComponent = () => {
-    console.log('Router.js')
-    return (
-<Router>
-    <Scene key="Devlist" component={DevList} title="" />
-</Router>
-    );
-};
+  const AppNavigator = createStackNavigator(
+    {
+      User: Profile 
+    }
+  );
 
-export default RouterComponent;
+export default createAppContainer(TabNavigator, AppNavigator);

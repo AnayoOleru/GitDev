@@ -6,17 +6,25 @@ import style from '../Styles/AllStyle';
 
 export default class DevList extends Component{
   render() {
-    // const {navigate} = this.props.navigation;
+      console.log(this.props);
+      
     return (
       <View style={style.container}>
         <Text style={style.title}>{this.props.title}</Text>
         <Search />
         <UserDetail />
-        {/* <Button
-        title="Go to Jane's profile"
-        onPress={() => navigate('User', {name: 'Jane'})}
-      /> */}
       </View>
     );
   }
+  static navigationOptions = {
+    title: 'Home',
+    fontSize: 400,
+    headerStyle: {
+      backgroundColor: '#f4511e',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
+  };
 }

@@ -26,12 +26,17 @@ export default styles = StyleSheet.create({
   title: {
     fontSize: 20,
     textAlign: 'center',
-    marginTop: 50,
+    marginTop: 55,
     borderBottomColor: '#FFFFFF', 
-    // borderBottomWidth: 50,
   },
   userDetailContainer: {
+    marginTop: 60,
     marginBottom:100,
+  },
+  cardContainer: {
+    flex: 1,
+    alignItems: 'center',
+    marginTop: -200,
   },
   userName: {
     marginTop: 30,
@@ -44,5 +49,60 @@ export default styles = StyleSheet.create({
     marginTop: 40,
     width: 400, 
     height: 250
+  },
+  article: {
+    padding: 25,
+    marginBottom: 40,
+  },
+  aboutImage: {
+    marginTop: 40,
+    marginBottom: 0,
+    width: 400, 
+    height: 250
+  },
+  CardText: {
+    textAlign: 'center',
+    fontSize: 30,
+  },
+  CardBox: {
+    backgroundColor: '#EDEDED',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 140, 
+    height: 50
+  },
+  CardNumber: {
+    fontSize: 25,
+  },
+  EachCard: {
+    marginTop: 30,
+  },
+  BorderLine: {
+    backgroundColor: '#EDEAEA',
+    marginTop: 30,
+    width: 300,
+    height: 2
+  },
+  button: {
+    position: 'relative',
+    paddingBottom: 500
+  },
+  ProfileContainer: {
+    marginTop: 100,
+  },
+  infoContainer: {
+    position: 'absolute',
+    marginTop: 550,
+    padding: 20,
+  },
+  userProfileName: {
+    fontSize: 30,
+    textAlign: 'center',
+    marginTop: 10,
+  },
+  EachButton: {
+    backgroundColor: 'black',
+    width: 200,
+    height: 50
   }
 });
