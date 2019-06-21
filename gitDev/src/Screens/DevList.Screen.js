@@ -5,9 +5,7 @@ import UserDetail from '../Components/UserDetails.Component';
 import style from '../Styles/AllStyle';
 
 export default class DevList extends Component{
-  render() {
-      console.log(this.props);
-      
+  render() {     
     return (
       <View style={style.container}>
         <Text style={style.title}>{this.props.title}</Text>
