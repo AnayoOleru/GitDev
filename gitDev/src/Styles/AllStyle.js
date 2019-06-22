@@ -2,6 +2,10 @@ import {StyleSheet} from 'react-native';
 import { bold } from 'ansi-colors';
 
 export default styles = StyleSheet.create({
+  text: {
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
   container: {
     flex: 1,
     alignItems: 'center',
@@ -30,8 +34,8 @@ export default styles = StyleSheet.create({
     borderBottomColor: '#FFFFFF', 
   },
   userDetailContainer: {
-    marginTop: 60,
-    marginBottom:100,
+    marginTop: 30,
+    marginBottom:10,
   },
   cardContainer: {
     flex: 1,
@@ -39,7 +43,7 @@ export default styles = StyleSheet.create({
     marginTop: -200,
   },
   userName: {
-    marginTop: 30,
+    marginTop: -30,
     fontWeight: 'bold',
   },
   size: {

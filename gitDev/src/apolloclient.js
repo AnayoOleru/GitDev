@@ -5,9 +5,9 @@ import {
 } from 'apollo-boost';
 const client = new ApolloClient({
     link: new HttpLink({
-      uri: 'https://api.github.com/users',
+      uri: 'https://api.github.com/graphql',
       headers: {
-        authorization: '2fa894be83dcbbd7d998c1bf11bb55f12dba83ef'
+        Authorization: 'bearer 74dc3f169e64b4551e3a3cb9172221dbedb8dab5'
       }
     }),
     cache: new InMemoryCache()
