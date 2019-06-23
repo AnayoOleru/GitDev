@@ -9,7 +9,7 @@ export default class RepoCard extends Component {
                 <View style={style.EachCard}>
                     <Text style={style.CardText}>Repository</Text>
                     <View style={style.CardBox}>
-                        <Text style={style.CardNumber}>59</Text>
+                        <Text style={style.CardNumber}>{this.props.Cardnumber}</Text>
                     </View>
                 </View>
                 <View style={style.BorderLine}></View>
@@ -17,7 +17,7 @@ export default class RepoCard extends Component {
                 <View style={style.EachCard}>
                     <Text style={style.CardText}>Starred</Text>
                     <View style={style.CardBox}>
-                        <Text style={style.CardNumber}>20</Text>
+                        <Text style={style.CardNumber}>{this.props.Starrednumber}</Text>
                     </View>
                 </View>
             </View>

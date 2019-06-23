@@ -15,6 +15,7 @@ query SearchJsDvelopersInLagos($queryString: String!) {
           name
           bio
           url
+          login
           repositories{
             totalCount
           }
@@ -27,48 +28,29 @@ query SearchJsDvelopersInLagos($queryString: String!) {
   }
 }
 `;
-const UserDetail = ({ queryString }) => (
+const UserDetail = ({ queryString, navigation }) => (
   <Query
     query={SEARCH_DEV}
-    variables={{ queryString: "location:lagos language:javascript" }}
+    variables={{ queryString: "location:lagos language:java" }}
   >
     {({ loading, error, data }) => {
       if (loading) return <Text style={{ flex: 1, alignItems: "center", justifyContent: "center", fontSize: 30 }}>Loading...</Text>;
       if (error) return <Text>Error :{error}</Text>;
       console.log(data, '>>>>>>DATA<<<<<<');
-
-      // const newData = data.search.edges.map((edge) => {
-      //   return edge.node.name
-      // });
-
-      // console.log('=======================');
-      // console.log(newData, 'another one');
-
-
-      // return data.search.edges.map(({ name, bio, url }) => (
-      //   <View style={style.userDetailContainer} key={name}>
-      //     <View>
-      //       <Text style={style.userName} onPress={() => this.props.navigation.navigate('User')}>{name}</Text>
-      //       <Text >{bio}</Text>
-      //     </View>
-      //   </View>
-      // ));
+      console.log(navigation, '>>>>>>PROPS<<<<<<');
 
       return (
-        // <Text style={style.userName}>{data.search.edges[0].node.name}</Text>
-        // <View style={style.userDetailContainer}>
-        // <View>
-        //     <Text style={style.userName} onPress={() => this.props.navigation.navigate('User')}>{data.search.edges[0].node.name}</Text>
-        //     <Text>{data.search.edges[0].node.bio}</Text>
-        // </View>
-        // </View>
           <FlatList 
           data={data.search.edges} 
           renderItem={({item}) => (
             <View style={style.userDetailContainer}>
-              <View>
-                <Text style={style.userName} onPress={() => this.props.navigation.navigate('User')}>{`${item.node.name}`}</Text>
-                <Text>{`${item.node.bio}`}</Text>
+              <View style={style.singleUserContainer}>
+                {/* pass the url to the navigate params */}
+                <Text style={style.userName} onPress={() => navigation.navigate('User', {
+                  userlogin:`${item.node.login}`
+                })}>{`${item.node.name}`}</Text>
+                <Text  style={style.Biography} >{`${item.node.bio}`}</Text>
+                <View style={style.hr} />
               </View>
           </View>)} 
           keyExtractor={(item, index) => index.toString()} 

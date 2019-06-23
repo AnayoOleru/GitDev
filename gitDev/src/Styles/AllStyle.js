@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import { SECONDARY_COLOR } from '../Constants/Constants';
 import { bold } from 'ansi-colors';
 
 export default styles = StyleSheet.create({
@@ -24,8 +25,6 @@ export default styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4, },
     shadowOpacity: 0.2,
-    elevation: 2,
-    position: 'relative',
   },
   title: {
     fontSize: 20,
@@ -34,16 +33,24 @@ export default styles = StyleSheet.create({
     borderBottomColor: '#FFFFFF', 
   },
   userDetailContainer: {
-    marginTop: 30,
-    marginBottom:10,
+    marginTop: 90,
+    padding: 15,
+    position: 'relative'
+  },
+  singleUserContainer: {
+    marginBottom: -90,
   },
   cardContainer: {
     flex: 1,
     alignItems: 'center',
-    marginTop: -200,
+    marginTop: -5,
   },
   userName: {
-    marginTop: -30,
+    marginTop: 10,
+    fontWeight: 'bold',
+  },
+  userName: {
+    marginBottom: 10,
     fontWeight: 'bold',
   },
   size: {
@@ -108,5 +115,39 @@ export default styles = StyleSheet.create({
     backgroundColor: 'black',
     width: 200,
     height: 50
+  },
+  Container: {
+    marginTop: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 30
+  },
+  hr: {
+    height: 0.3,
+    backgroundColor: SECONDARY_COLOR,
+    marginTop: 7,
+    marginLeft: 0
+  },
+  avatar: {
+    width: 50,
+    height: 50,
+    borderRadius: 25
+  },
+  info: {
+    paddingLeft: 15,
+    flex: 1
+  },
+  mainText: {
+    fontSize: 17
+  },
+  subText: {
+    color: '#8492A6',
+    fontSize: 14
+  },
+  arrow: {
+    width: 25,
+    height: 25,
+    justifyContent: 'flex-end'
   }
+
 });
