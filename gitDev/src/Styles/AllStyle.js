@@ -1,6 +1,5 @@
 import {StyleSheet} from 'react-native';
-import { SECONDARY_COLOR } from '../Constants/Constants';
-import { bold } from 'ansi-colors';
+import { BLACK, WHITE, GREY, DARK_GRAY } from '../Constants/Constants';
 
 export default styles = StyleSheet.create({
   text: {
@@ -10,27 +9,12 @@ export default styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  searchBox: {
-    borderColor: '#000000', 
-    fontSize: 20,
-    textAlign: 'center',
-    backgroundColor: '#f2f5f9',
-    marginTop: 20,
-    marginBottom: 0,
-    width: 350,
-    height: 50,
-    fontSize: 15,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4, },
-    shadowOpacity: 0.2,
   },
   title: {
     fontSize: 20,
     textAlign: 'center',
     marginTop: 55,
-    borderBottomColor: '#FFFFFF', 
+    borderBottomColor: WHITE, 
   },
   userDetailContainer: {
     marginTop: 90,
@@ -47,10 +31,6 @@ export default styles = StyleSheet.create({
   },
   userName: {
     marginTop: 10,
-    fontWeight: 'bold',
-  },
-  userName: {
-    marginBottom: 10,
     fontWeight: 'bold',
   },
   size: {
@@ -76,7 +56,7 @@ export default styles = StyleSheet.create({
     fontSize: 25,
   },
   CardBox: {
-    backgroundColor: '#EDEDED',
+    backgroundColor: GREY,
     alignItems: 'center',
     justifyContent: 'center',
     width: 140, 
@@ -89,7 +69,7 @@ export default styles = StyleSheet.create({
     marginTop: 30,
   },
   BorderLine: {
-    backgroundColor: '#EDEAEA',
+    backgroundColor: GREY,
     marginTop: 30,
     width: 300,
     height: 2
@@ -112,7 +92,7 @@ export default styles = StyleSheet.create({
     marginTop: 10,
   },
   EachButton: {
-    backgroundColor: 'black',
+    backgroundColor: BLACK,
     width: 200,
     height: 50
   },
@@ -122,12 +102,12 @@ export default styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 30
   },
-  hr: {
-    height: 0.3,
-    backgroundColor: SECONDARY_COLOR,
-    marginTop: 7,
-    marginLeft: 0
-  },
+  // hr: {
+  //   height: 0.3,
+  //   backgroundColor: SECONDARY_COLOR,
+  //   marginTop: 7,
+  //   marginLeft: 0
+  // },
   avatar: {
     width: 50,
     height: 50,
@@ -139,10 +119,6 @@ export default styles = StyleSheet.create({
   },
   mainText: {
     fontSize: 17
-  },
-  subText: {
-    color: '#8492A6',
-    fontSize: 14
   },
   arrow: {
     width: 25,
@@ -156,7 +132,7 @@ export default styles = StyleSheet.create({
     textAlign: 'center'
   },
   userProfileLogin: {
-    color: '#a09d9d',
+    color: DARK_GRAY,
     fontSize: 20,
   },
   userProfileBio: {

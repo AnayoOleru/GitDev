@@ -1,17 +1,11 @@
-import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Button, FlatList } from 'react-native';
-import Search from '../Components/Search.Component';
-import UserDetail from '../Components/UserDetails.Component';
+import React from 'react';
+import { Text, View, FlatList } from 'react-native';
 import ProfileImage from '../Components/ProfileImage.Component';
 import RepoCard from '../Components/Card.Component';
 import UserInformation from '../Components/UserInfo.Component';
-import ProfileButton from '../Components/Button.Component';
 import { Query } from "react-apollo";
 import { gql } from "apollo-boost";
 import style from '../Styles/AllStyle';
-
-// get the url from the params,  pass it on to the SEARCH_DEV 
-
 
 const Profile = ({ queryString, navigation }) => (
   navigationOptions = {

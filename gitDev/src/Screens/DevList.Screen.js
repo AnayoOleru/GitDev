@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
-// import {Platform, StyleSheet, Text, View, Button} from 'react-native';
-import { Container, Header, Content, List } from 'native-base';
-import Search from '../Components/Search.Component';
+import { Container, Content, List } from 'native-base';
 import UserDetail from '../Components/UserDetails.Component';
-import style from '../Styles/AllStyle';
+import { BLACK, WHITE } from '../Constants/Constants';
 
 export default class DevList extends Component{
   render() {     
@@ -21,9 +19,9 @@ export default class DevList extends Component{
     title: 'All Java Developers',
     fontSize: 400,
     headerStyle: {
-      backgroundColor: '#161616',
+      backgroundColor: BLACK,
     },
-    headerTintColor: '#fff',
+    headerTintColor: WHITE,
     headerTitleStyle: {
       fontWeight: 'bold',
     },
