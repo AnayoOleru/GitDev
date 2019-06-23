@@ -8,9 +8,8 @@ export default class UserInformation extends Component {
         return (
             <View style={style.infoContainer}>
                 <View style={style.article}>
-                <Text style={style.userProfileName}>Anayo Oleru</Text>
-                <Text style={style}>Morbi non leo aliquet, eleifend lectus quis,
-                    pharetra lectus pellentesque
+                <Text style={style.userProfileName}>{this.props.Profilename}</Text>
+                <Text>{this.props.ProfileBio}
                     </Text>
                     <View style={style.button} >
                     <ProfileButton style={style.EachButton} view={'View Profile'}/>
