@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Query } from "react-apollo";
 import { gql } from "apollo-boost";
-import { Platform, StyleSheet, Text, View, Button, TextInput, FlatList } from 'react-native';
+import { FlatList } from 'react-native';
+import { Container, Header, Content, List, ListItem, Thumbnail, Text, Left, Body, Right, Button, Icon } from 'native-base';
 import { withNavigation } from 'react-navigation';
 import style from '../Styles/AllStyle';
 
@@ -16,6 +17,7 @@ query SearchJsDvelopersInLagos($queryString: String!) {
           bio
           url
           login
+          avatarUrl
           repositories{
             totalCount
           }
@@ -43,16 +45,33 @@ const UserDetail = ({ queryString, navigation }) => (
           <FlatList 
           data={data.search.edges} 
           renderItem={({item}) => (
-            <View style={style.userDetailContainer}>
-              <View style={style.singleUserContainer}>
-                {/* pass the url to the navigate params */}
-                <Text style={style.userName} onPress={() => navigation.navigate('User', {
+          //   <View style={style.userDetailContainer}>
+          //     <View style={style.singleUserContainer}>
+          //       <Text style={style.userName} onPress={() => navigation.navigate('User', {
+          //         userlogin:`${item.node.login}`
+          //       })}>{`${item.node.name}`}</Text>
+          //       <Text  style={style.Biography} >{`${item.node.bio}`}</Text>
+          //       <View style={style.hr} />
+          //     </View>
+          // </View>
+
+            <ListItem thumbnail onPress={() => navigation.navigate('User', {
+              userlogin:`${item.node.login}`
+            })}>
+              <Left>
+                <Thumbnail source={{ uri: `${item.node.avatarUrl}` }} />
+              </Left>
+              <Body>
+                <Text>{`${item.node.name}`}</Text>
+                <Text note>{`${item.node.bio}`}</Text>
+              </Body>
+              <Right>
+                  <Icon name="arrow-forward" style={{paddingRight: 5, fontSize: 20}} onPress={() => navigation.navigate('User', {
                   userlogin:`${item.node.login}`
-                })}>{`${item.node.name}`}</Text>
-                <Text  style={style.Biography} >{`${item.node.bio}`}</Text>
-                <View style={style.hr} />
-              </View>
-          </View>)} 
+                })} />
+              </Right>
+            </ListItem>
+          )} 
           keyExtractor={(item, index) => index.toString()} 
           
           

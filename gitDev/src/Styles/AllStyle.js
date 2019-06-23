@@ -57,13 +57,13 @@ export default styles = StyleSheet.create({
     width: 40,
   },
   profileImage: {
-    marginTop: 40,
+    marginTop: 0,
     width: 400, 
     height: 250
   },
   article: {
     padding: 25,
-    marginBottom: 40,
+    marginBottom: 0,
   },
   aboutImage: {
     marginTop: 40,
@@ -73,7 +73,7 @@ export default styles = StyleSheet.create({
   },
   CardText: {
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 25,
   },
   CardBox: {
     backgroundColor: '#EDEDED',
@@ -96,7 +96,7 @@ export default styles = StyleSheet.create({
   },
   button: {
     position: 'relative',
-    paddingBottom: 500
+    paddingBottom: 10
   },
   ProfileContainer: {
     marginTop: 100,
@@ -148,6 +148,20 @@ export default styles = StyleSheet.create({
     width: 25,
     height: 25,
     justifyContent: 'flex-end'
+  },
+  profileInformation: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignContent: 'center',
+    textAlign: 'center'
+  },
+  userProfileLogin: {
+    color: '#a09d9d',
+    fontSize: 20,
+  },
+  userProfileBio: {
+    padding: 10,
+    textAlign: 'center'
   }
 
 });

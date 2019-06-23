@@ -61,8 +61,14 @@ query{
           renderItem={({ item }) => (
             <View style={style.container}>
               <ProfileImage UserProfileImage={`${item.avatarUrl}`} />
-              <RepoCard Cardnumber={`${item.repositories.totalCount}`} Starrednumber={`${item.starredRepositories.totalCount}`} />
-              <UserInformation Profilename={`${item.name}`} ProfileBio={`${item.bio}`} />
+              <RepoCard 
+              Cardnumber={`${item.repositories.totalCount}`} 
+              Starrednumber={`${item.starredRepositories.totalCount}`}
+              Profilename={`${item.name}`}
+              ProfileLoginName={`${item.login}`} 
+              ProfileBio={`${item.bio}`} 
+              />
+              <UserInformation view={'View on Github'} githubUrl={`${item.url}`} />
             </View>
           )}
           keyExtractor={(item, index) => index.toString()}

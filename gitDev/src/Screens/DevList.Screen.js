@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, Button} from 'react-native';
+// import {Platform, StyleSheet, Text, View, Button} from 'react-native';
+import { Container, Header, Content, List } from 'native-base';
 import Search from '../Components/Search.Component';
 import UserDetail from '../Components/UserDetails.Component';
 import style from '../Styles/AllStyle';
@@ -7,18 +8,20 @@ import style from '../Styles/AllStyle';
 export default class DevList extends Component{
   render() {     
     return (
-      <View style={style.container}>
-        <Text style={style.title}>{this.props.title}</Text>
-        <Search />
-        <UserDetail />
-      </View>
+          <Container>
+          <Content>
+            <List>
+            <UserDetail />
+            </List>
+          </Content>
+        </Container>
     );
   }
   static navigationOptions = {
-    title: 'Home',
+    title: 'All Java Developers',
     fontSize: 400,
     headerStyle: {
-      backgroundColor: '#f4511e',
+      backgroundColor: '#161616',
     },
     headerTintColor: '#fff',
     headerTitleStyle: {
