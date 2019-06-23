@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { View, Image, Text, Button } from 'react-native';
-import style from '../Styles/AllStyle';
+import { Text, Button } from 'native-base';
+import { Linking } from 'react-native';
 
 export default class ProfileButton extends Component {
     render() {
         return (
-            <View>
-                <Button style={this.props.style}  title={this.props.view} />
-            </View>
+            <Button block dark onPress={ ()=> Linking.openURL(this.props.githubUrl) }>
+            <Text>{this.props.view}</Text>
+          </Button>
         );
     }
 }

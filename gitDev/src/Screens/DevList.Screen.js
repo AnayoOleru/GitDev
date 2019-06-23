@@ -1,26 +1,27 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, Button} from 'react-native';
-import Search from '../Components/Search.Component';
+import { Container, Content, List } from 'native-base';
 import UserDetail from '../Components/UserDetails.Component';
-import style from '../Styles/AllStyle';
+import { BLACK, WHITE } from '../Constants/Constants';
 
 export default class DevList extends Component{
   render() {     
     return (
-      <View style={style.container}>
-        <Text style={style.title}>{this.props.title}</Text>
-        <Search />
-        <UserDetail />
-      </View>
+          <Container>
+          <Content>
+            <List>
+            <UserDetail />
+            </List>
+          </Content>
+        </Container>
     );
   }
   static navigationOptions = {
-    title: 'Home',
+    title: 'All Java Developers',
     fontSize: 400,
     headerStyle: {
-      backgroundColor: '#f4511e',
+      backgroundColor: BLACK,
     },
-    headerTintColor: '#fff',
+    headerTintColor: WHITE,
     headerTitleStyle: {
       fontWeight: 'bold',
     },
