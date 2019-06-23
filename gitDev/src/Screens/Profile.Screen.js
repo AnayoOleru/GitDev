@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, FlatList } from 'react-native';
+import { Text, View, FlatList, Image } from 'react-native';
 import ProfileImage from '../Components/ProfileImage.Component';
 import RepoCard from '../Components/Card.Component';
 import UserInformation from '../Components/UserInfo.Component';
@@ -45,7 +45,7 @@ query{
     variables={{ queryString: "location:lagos language:java" }}
   >
     {({ loading, error, data }) => {
-      if (loading) return <Text style={{textAlign: "center", justifyContent: "center", fontSize: 30 }}>Loading...</Text>;
+      if (loading) return <Image source={require('../Assets/loader.gif')} style={{ marginTop: 160, marginLeft: 50 }} />;
       if (error) return <Text>Error :{error}</Text>;
       const user = Object.values(data);
 
@@ -61,8 +61,10 @@ query{
               Profilename={`${item.name}`}
               ProfileLoginName={`${item.login}`} 
               ProfileBio={`${item.bio}`} 
+              view={'View on Github'}
+              githubUrl={`${item.url}`}
               />
-              <UserInformation view={'View on Github'} githubUrl={`${item.url}`} />
+              <UserInformation view={'Share Profile'} />
             </View>
           )}
           keyExtractor={(item, index) => index.toString()}
