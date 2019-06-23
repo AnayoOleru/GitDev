@@ -7,7 +7,7 @@ const client = new ApolloClient({
     link: new HttpLink({
       uri: 'https://api.github.com/graphql',
       headers: {
-        Authorization: 'bearer 7a90be6343f9e8fd1c5ce4e8c172e7f72779ffb7'
+        Authorization: 'bearer a6b21fd8447bff3e0d2156d67bd9db8e7c86792d'
       }
     }),
     cache: new InMemoryCache()

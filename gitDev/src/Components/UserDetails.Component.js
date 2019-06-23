@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Query } from "react-apollo";
 import { gql } from "apollo-boost";
-import { FlatList } from 'react-native';
+import { FlatList, Image } from 'react-native';
 import { Container, Header, Content, List, ListItem, Thumbnail, Text, Left, Body, Right, Button, Icon } from 'native-base';
 import { withNavigation } from 'react-navigation';
 import style from '../Styles/AllStyle';
@@ -36,7 +36,7 @@ const UserDetail = ({ queryString, navigation }) => (
     variables={{ queryString: "location:lagos language:java" }}
   >
     {({ loading, error, data }) => {
-      if (loading) return <Text style={{ flex: 1, alignItems: "center", justifyContent: "center", fontSize: 30 }}>Loading...</Text>;
+      if (loading) return <Image source={require('../Assets/loader.gif')} style={{ marginTop: 160, marginLeft: 50 }} />;
       if (error) return <Text>Error :{error}</Text>;
       console.log(data, '>>>>>>DATA<<<<<<');
       console.log(navigation, '>>>>>>PROPS<<<<<<');

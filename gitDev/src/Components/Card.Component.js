@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Linking } from 'react-native';
+import { Text, Button } from 'native-base';
 import style from '../Styles/AllStyle';
 
 export default class RepoCard extends Component {
@@ -7,9 +8,13 @@ export default class RepoCard extends Component {
         return (
             <View style={style.cardContainer}>
                 <View style={style.profileInformation}>
-                <Text style={style.userProfileName}>{this.props.Profilename}</Text>
-                <Text style={style.userProfileLogin}>{this.props.ProfileLoginName}</Text>
-                <Text style={style.userProfileBio}>{this.props.ProfileBio}</Text>
+                    <Text style={style.userProfileName}>{this.props.Profilename}</Text>
+                    <Text style={style.userProfileLogin}>{this.props.ProfileLoginName}</Text>
+                    <Text style={style.userProfileBio}>{this.props.ProfileBio}</Text>
+                    
+                    <Button block dark onPress={() => Linking.openURL(this.props.githubUrl)}>
+                    <Text>{this.props.view}</Text>
+                    </Button>
                 </View>
                 <View style={style.BorderLine}></View>
                 <View style={style.EachCard}>
