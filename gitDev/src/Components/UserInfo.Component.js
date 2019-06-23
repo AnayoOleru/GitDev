@@ -11,7 +11,6 @@ export default class UserInformation extends Component {
                     <ProfileButton 
                     style={style.EachButton} 
                     view={this.props.view} 
-                    githubUrl ={this.props.githubUrl}
                 />
                     </View>
             </View>
